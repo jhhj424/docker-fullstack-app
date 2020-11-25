@@ -26,15 +26,15 @@ services:
       - /app/node_modules
       - ./backend:/app
 
-  mysql:
-    build: ./mysql
-    restart: unless-stopped
-    container_name: app_mysql
-    ports: 
-      - "3306:3306"
-    volumes: # 데이터 베이스의 저장된 자료를 컨테이너가 삭제되더라도 자료가 지워지지 않도록 해주기 위한 볼륨
-      - ./mysql/mysql_data:/var/lib/mysql
-      - ./mysql/sqls/:/docker-entrypoint-initdb.d/
-    environment: 
-      MYSQL_ROOT_PASSWORD: jhhj424
-      MYSQL_DATABASE: myapp
+  # mysql:
+  #   build: ./mysql
+  #   restart: unless-stopped
+  #   container_name: app_mysql
+  #   ports: 
+  #     - "3306:3306"
+  #   volumes: # 데이터 베이스의 저장된 자료를 컨테이너가 삭제되더라도 자료가 지워지지 않도록 해주기 위한 볼륨
+  #     - ./mysql/mysql_data:/var/lib/mysql
+  #     - ./mysql/sqls/:/docker-entrypoint-initdb.d/
+  #   environment: 
+  #     MYSQL_ROOT_PASSWORD: jhhj424
+  #     MYSQL_DATABASE: myapp
