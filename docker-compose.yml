@@ -22,15 +22,15 @@ services:
       dockerfile: Dockerfile.dev
       context: ./backend
     container_name: app_backend
-    volumes: 
+    volumes:
       - /app/node_modules
       - ./backend:/app
     environment: 
       MYSQL_HOST: mysql
-      MYSQL_USER: root
+      MYSQL_USER: root 
       MYSQL_ROOT_PASSWORD: jhhj159357
       MYSQL_DATABASE: myapp
-      MYSQL_PORT: 3306
+      MYSQL_PORT: 3306   
 
   # mysql:
   #   build: ./mysql
