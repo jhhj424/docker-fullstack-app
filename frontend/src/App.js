@@ -28,7 +28,7 @@ function App() {
         setLists([...lists, response.data]);
         setValue("");
       } else {
-        alert("값을 DB에 넣는데 실패했습니다.");
+        alert("값을 DB에 넣는데 실패했습니다...");
       }
     });
   };
